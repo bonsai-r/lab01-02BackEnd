@@ -1,37 +1,48 @@
 package entidades;
 
+import java.util.ArrayList;
+
 public class Alumno {
     
-    private String cedula_alumno;
+    private String cedula;
     private String nombre;
     private String telefono;
     private String email;
-    private String fecha_nacimiento;
-    private String carrera;
-    
-    public Alumno(){
-        cedula_alumno = new String();
-        nombre = new String();
-        telefono = new String(); 
-        email = new String();
-        fecha_nacimiento = new String();
-        carrera = new String();
-    }
-    public Alumno(String cedula_alumno, String nombre, String telefono, String email, String fecha_nacimiento, String carrera){
-       this.cedula_alumno = cedula_alumno;
-       this.nombre = nombre;
-       this.telefono = telefono;
-       this.email= email;
-       this.fecha_nacimiento = fecha_nacimiento;
-       this.carrera = carrera;
-    } 
+    private String codigo_carrera;
+    private ArrayList<Grupo> grupos;
 
-    public String getCedula_alumno() {
-        return cedula_alumno;
+    public Alumno(String cedula, String nombre, String telefono, String email, String codigo_carrera, ArrayList<Grupo> grupos ) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.email = email;
+        this.codigo_carrera = codigo_carrera;
+        this.grupos = grupos; 
     }
 
-    public void setCedula_alumno(String cedula_alumno) {
-        this.cedula_alumno = cedula_alumno;
+    public Alumno() {
+        this.cedula = "";
+        this.nombre = "";
+        this.telefono = "";
+        this.email = "";
+        this.codigo_carrera = "";
+        this.grupos = new ArrayList<Grupo>(); 
+    }
+
+    public ArrayList getGrupos() {
+        return grupos;
+    }
+
+    public void setGrupos(ArrayList Grupos) {
+        this.grupos = Grupos;
+    }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
     public String getNombre() {
@@ -58,24 +69,16 @@ public class Alumno {
         this.email = email;
     }
 
-    public String getFecha_nacimiento() {
-        return fecha_nacimiento;
+    public String getCodigo_carrera() {
+        return codigo_carrera;
     }
 
-    public void setFecha_nacimiento(String fecha_nacimiento) {
-        this.fecha_nacimiento = fecha_nacimiento;
+    public void setCodigo_carrera(String codigo_carrera) {
+        this.codigo_carrera = codigo_carrera;
     }
-
-    public String getCarrera() {
-        return carrera;
-    }
-
-    public void setCarrera(String carrera) {
-        this.carrera = carrera;
-    }
-
+    
     @Override
     public String toString() {
-        return "Alumno{" + "cedula_alumno=" + cedula_alumno + ", nombre=" + nombre + ", telefono=" + telefono + ", email=" + email + ", fecha_nacimiento=" + fecha_nacimiento + ", carrera=" + carrera + '}';
+        return "Alumno{" + "cedula=" + cedula+ ", nombre=" + nombre + ", telefono=" + telefono + ", email=" + email +  ", carrera=" + codigo_carrera + '}';
     }
 }

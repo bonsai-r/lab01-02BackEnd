@@ -2,28 +2,28 @@ package entidades;
 
 public class Carrera {
     
-    private String codigo_carrera;
+    private String codigo;
     private String nombre;
     private String titulo;
 
     public Carrera() {
-        codigo_carrera = new String();
+        codigo = new String();
         nombre = new String();
         titulo = new String();
     }
 
     public Carrera(String codigo_carrera, String nombre, String titulo) {
-        this.codigo_carrera = codigo_carrera;
+        this.codigo = codigo_carrera;
         this.nombre = nombre;
         this.titulo = titulo;
     }
 
-    public String getCodigo_carrera() {
-        return codigo_carrera;
+    public String getCodigo() {
+        return codigo;
     }
 
-    public void setCodigo_carrera(String codigo_carrera) {
-        this.codigo_carrera = codigo_carrera;
+    public void setCodigo(String codigo_carrera) {
+        this.codigo = codigo_carrera;
     }
 
     public String getNombre() {
@@ -44,6 +44,6 @@ public class Carrera {
 
     @Override
     public String toString() {
-        return "Carrera{" + "codigo_carrera=" + codigo_carrera + ", nombre=" + nombre + ", titulo=" + titulo + '}';
+        return "Carrera{" + "codigo=" + codigo + ", nombre=" + nombre + ", titulo=" + titulo + '}';
     }
 }

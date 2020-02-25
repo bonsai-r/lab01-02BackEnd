@@ -6,6 +6,7 @@ public class Profesor {
     private String nombre;
     private String telefono;
     private String email;
+    
 
     public Profesor() {
         cedula_profesor = new String();
